@@ -408,10 +408,10 @@ export const checkSPLTokenBalance = async (
 
   // Fetch token account info
   const tokenAccount = await getAccount(connection, tokenAccountAddress);
-
+  const decimals = BigInt(10 ** tokenDetails.decimals);
   console.clear();
   console.log(
-    green(`Balance: ${BigInt(tokenAccount.amount)} ${tokenSymbol}\n\n`)
+    green(`Balance: ${BigInt(tokenAccount.amount / decimals)} ${tokenSymbol}\n\n`)
   );
 };
 
@@ -445,6 +445,7 @@ export const getSPLTokenVaultBalance = async (
     program.programId // Program authority
   );
 
+  const decimals = BigInt(10 ** tokenDetails.decimals);
   console.clear();
-  console.log(green(`Balance: ${BigInt(vaultATA.amount)} ${tokenSymbol}\n\n`));
+  console.log(green(`Balance: ${BigInt(vaultATA.amount / decimals)} ${tokenSymbol}\n\n`));
 };
