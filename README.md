@@ -3,12 +3,12 @@
 <img width="200px" src="https://github.com/user-attachments/assets/15f60a6b-5126-4159-aa95-ced58efbd467" />
 </div>
 
-
 A command-line interface (CLI) tool for interacting with Solana programs.
 
 ## Features
 
 - Wallet Management
+
   - Create new wallets
   - Load existing wallets
   - Print active wallet address
@@ -16,6 +16,7 @@ A command-line interface (CLI) tool for interacting with Solana programs.
   - Request SOL airdrops (devnet)
 
 - Token Operations
+
   - List supported tokens
   - View token details
   - Add new tokens (admin only)
@@ -32,18 +33,20 @@ A command-line interface (CLI) tool for interacting with Solana programs.
 
 - node.js
 - npm
-- ts-node
+- tsc
 
 ## Installation
 
 ```bash
 npm install
 ```
+
 ## Usage
+
 1. Start the REPL interface:
 
 ```bash
-ts-node main.ts
+npm start
 ```
 
 2. Use the numbered menu to interact with different features:
